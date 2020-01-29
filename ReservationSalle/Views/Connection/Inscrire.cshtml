@@ -1,0 +1,33 @@
+﻿@model ReservationSalle.Models.User
+
+@{
+    ViewBag.Title = "Inscrire";
+}
+
+<h2>Inscrire</h2>
+
+<h3>Inscription </h3>
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.Label("Name")
+        @Html.TextBox("Name")
+        @Html.ValidationMessage("Name")
+    </div> 
+    <div>
+        @Html.Label("Prenom")
+        @Html.TextBox("Prenom")
+        @Html.ValidationMessage("Prenom")
+    </div> 
+    <div>
+        @Html.Label("Login")
+        @Html.TextBox("Login")
+        @Html.ValidationMessage("Login")
+    </div>
+    <div>
+        @Html.Label("Password")
+        @Html.Password("Password")
+        @Html.ValidationMessage("Password")
+    </div>
+    <input type="submit" value="Inscrire" />
+}
